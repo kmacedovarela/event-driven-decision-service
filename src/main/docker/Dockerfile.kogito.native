@@ -1,0 +1,7 @@
+# Build:
+# docker build -f src/main/docker/Dockerfile.kogito.native -t kvarela/decision-service .
+# Run
+# docker run -i --rm -p 8080:8080 kvarela/decision-service 
+
+FROM quay.io/kiegroup/kogito-runtime-native:latest
+COPY target/*-runner /home/kogito/bin/
